@@ -1466,11 +1466,32 @@ if with_gallium_opencl
 endif
 
 if with_amd_vk or with_gallium_radeonsi or with_gallium_opencl
-  _llvm_version = '>= 8.0.0'
-elif with_gallium_swr
-  _llvm_version = '>= 6.0.0'
+  _llvm_version = '>= 3.9.0'
 else
   _llvm_version = '>= 3.9.0'
+else  
+  _llvm_version = '>= 6.0.0'
+else
+  _llvm_version = '>= 7.0.0'
+else
+  _llvm_version = '>= 8.0.0'
+else
+  _llvm_version = '>= 9.0.0'
+else
+  _llvm_version = '>= 10.0.0'
+elif with_gallium_swr
+else
+  _llvm_version = '>= 3.9.0'
+else  
+  _llvm_version = '>= 6.0.0'
+else
+  _llvm_version = '>= 7.0.0'
+else
+  _llvm_version = '>= 8.0.0'
+else
+  _llvm_version = '>= 9.0.0'
+else
+  _llvm_version = '>= 10.0.0'
 endif
 
 _shared_llvm = get_option('shared-llvm')
